@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <metadata>
+        <titulo>TPC1 - Jacaré</titulo>
+        <data>22 de fevereiro de 2022</data>
+        <autor>Maria Quintas Barros</autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </metadata>
+    <resumo>
+        Este trabalho consistia em desevolver uma página web simples sobre um dos seguintes temas:
+            - Jacaré
+            - Japão
+            - Jarro
+            - José
+            - Janela
+        O objetivo deste primeiro trabalho é começar a desenvolver as nossas capacidades de desenvolvimento Web, bem como explorar ferramentas como HTML, CSS, JavaScript.
+    </resumo>
+    <resultados>
+        <html>
+            <nome>index.html</nome>
+            <nome>caca.html</nome>
+            <nome>genero.html</nome>
+        </html>
+        <css>
+            <nome>app.css</nome>
+        </css>
+    </resultados>
+</manifesto>
