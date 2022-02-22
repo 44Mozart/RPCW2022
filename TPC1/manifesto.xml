@@ -1,28 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<manifesto>
-    <metadata>
+<?xml-model href="manifesto.xsd"?>
+<doc>
+    <meta>
         <titulo>TPC1 - Jacaré</titulo>
-        <data>22 de fevereiro de 2022</data>
-        <autor>PG47488 : Maria Quintas Barros</autor>
-        <uc>RPCW : Representação e Processamento de Conhecimento na Web</uc>
-    </metadata>
+        <data>15 de fevereiro de 2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
     <resumo>
-        Este trabalho consistia em desevolver uma página web simples sobre um dos seguintes temas:
-            - Jacaré
-            - Japão
-            - Jarro
-            - José
-            - Janela
-        O objetivo deste primeiro trabalho é começar a desenvolver as nossas capacidades de desenvolvimento Web, bem como explorar ferramentas como HTML, CSS, JavaScript.
+        <p>Este trabalho consistia em desevolver uma página web simples sobre um dos seguintes temas:</p>
+        <p>- Jacaré</p>
+        <p>- Japão</p>
+        <p>- Jarro</p>
+        <p>- José</p>
+        <p>- Janela</p>
+        <p>O objetivo deste primeiro trabalho é começar a desenvolver as nossas capacidades de desenvolvimento Web, bem como explorar ferramentas como HTML, CSS, JavaScript.</p>
     </resumo>
     <resultados>
-        <html>
-            <nome>index.html</nome>
-            <nome>caca.html</nome>
-            <nome>genero.html</nome>
-        </html>
-        <css>
-            <nome>app.css</nome>
-        </css>
+        <resultado>
+            <url>/HTML/index.html</url>
+            <nome>Página web</nome>
+        </resultado>
+        <resultado>
+            <url>/HTML/caca.html</url>
+            <nome>Página web</nome>
+        </resultado>
+        <resultado>
+            <url>/HTML/genero.html</url>
+            <nome>Página web</nome>
+        </resultado>
+        <resultado>
+            <url>/CSS/app.css</url>
+            <nome>Stylesheet do TPC</nome>
+        </resultado>
     </resultados>
-</manifesto>
+</doc>
