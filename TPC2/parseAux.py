@@ -19,3 +19,5 @@ for ele in data:
         f.write('<li>' + g + '</li>')
     f.write('</ul>\n</div></body>\n')
     i += 1
+
+    f.write('<div class="w3-container w3-center"><a href="http://localhost:7777/filmes">Voltar atrás</a></div>')

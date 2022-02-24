@@ -9,7 +9,7 @@ f.write('<body>\n<div class="w3-bar w3-center">\n<h1>Filmes</h1>\n</div>\n<div c
 i = 1
 for ele in data:
     numero = str(i)
-    f.write('<p><a href="filmes/f' + numero +
+    f.write('<p><a href="http://localhost:7777/filmes/f' + numero +
             '">' + ele['title'] + '</a>\n</p>')
     i += 1
 f.write('</div></body>\n')
