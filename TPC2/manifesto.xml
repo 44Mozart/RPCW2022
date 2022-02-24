@@ -15,7 +15,7 @@
     <resumo>
         <p>Este trabalho consistia em desevolver uma servidor Web. Em primeiro lugar é feita a leitura de um 
             ficheiro JSON e depois são geradas as páginas HTML.
-        Posteriormente é criado um servidor que irá ler as páginas na porta 7777</p>
+        Posteriormente é criado um servidor que irá ler as páginas na porta 7777.</p>
 
     </resumo>
     <resultados>
