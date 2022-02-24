@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC2</titulo>
+        <data>22 de fevereiro de 2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consistia em desevolver uma servidor Web. Em primeiro lugar é feita a leitura de um 
+            ficheiro JSON e depois são geradas as páginas HTML.
+        Posteriormente é criado um servidor que irá ler as páginas na porta 7777</p>
+
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>/HTML/index.html</url>
+            <nome>Página web principal</nome>
+        </resultado>
+        <resultado>
+            <url>/HTML/fx.html</url>
+            <nome>Páginas html onde x está compreendido no intervalo 1-4566</nome>
+        </resultado>
+        <resultado>
+            <url>fileserver.js</url>
+            <nome>Ficheiro do servidor</nome>
+        </resultado>
+        <resultado>
+            <url>/CSS/app.css</url>
+            <nome>Stylesheet do TPC</nome>
+        </resultado>
+        <resultado>
+            <url>cinemaATP.json</url>
+            <nome>Dataset</nome>
+        </resultado>
+        <resultado>
+            <url>parseAux.py</url>
+            <nome>Fichiero de parsing de páginas secundárias HTML</nome>
+        </resultado>
+        <resultado>
+            <url>parseFilmes.py</url>
+            <nome>Fichiero de parsing de páginas index.HTML</nome>
+        </resultado>
+    </resultados>
+</doc>
