@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC3</titulo>
+        <data>8 de Março de 2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consistia em desevolver uma servidor Web que iria buscar informação a um REST API. 
+            Em primeiro, é necessário ir buscar os dados sobre os alinos, cursos e instrumentos obtifos através do ficheiro db.json.
+        Posteriormente é criado um servidor que irá apresentar os dados.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>servidor.js</url>
+            <nome>Servidor resposável para recolher os dados</nome>
+        </resultado>
+        <resultado>
+            <url>db.json</url>
+            <nome>Ficheiro JSON usado para criar um REST API</nome>
+        </resultado>
+    </resultados>
+</doc>
