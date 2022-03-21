@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC3</titulo>
+        <data>15 de Março de 2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>
+            Este trabalho consistia na implementação de um servidor NodeJS com a utilização de uma REST API, neste caso o
+            <xref>
+                <url>https://www.npmjs.com/package/json-server</url>
+                <texto>json-server</texto>
+            </xref>
+        </p>
+        <p>O objetivo seria criar uma página HTML onde apresentássemos um formulário que adicionasse novas tarefas, uma lista de tarefas por realizar e uma outra de tarefas por realizar</p>
+        <p>Ao registarmos uma nova tarefa deveríamos guardar: a tarefa em questão, a data em que foi criada, a data limite e o responsável pela mesma.</p>
+        <p>
+        Na lista de tarefas a realizar deve existir a opção de editar a mesma, onde os campos do formulário são preenchidos com os valores anteriores para posterior alteração,</p>
+        <p>e a opção de confirmar que a tarefa já foi realizada, adicionando a mesma à lista de tarefas realizadas.</p>
+        <p>Já na lista de tarefas realizadas deve existir uma opção que permite eliminar as tarefas da mesma.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>toDo.js</url>
+            <texto>Serviço que responde aos pedidos do cliente e comunica com a API do json-server.</texto>
+        </resultado>
+        <resultado>
+            <url>static.js</url>
+            <texto>Serviço que responde a pedidos estáticos como requests de imagens e ficheiros .css</texto>
+        </resultado>
+        <resultado>
+            <url>tarefa.json</url>
+            <texto>Dataset.</texto>
+        </resultado>
+        <resultado>
+            <url>https://www.npmjs.com/package/axios</url>
+            <texto>Utilizado para efetuar os pedidos à API. Para instalar correr "npm install axios".</texto>
+        </resultado>
+        <resultado>
+            <url>https://www.npmjs.com/package/nodemon</url>
+            <texto>Utilizado para monitorizar notificações na aplicação e reiniciar o servidor após as mesmas.</texto>
+        </resultado>
+    </resultados>
+</doc>
