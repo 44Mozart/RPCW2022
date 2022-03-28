@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div.w3-bar.w3-border.w3-blue-grey
+    a.w3-bar-item.w3-button(href="/musicas") Home 
+    a.w3-bar-item.w3-button(href="/musicas/insert") Inserir Musica
+  h1 Musica
+  p  
+    b Identificador: 
+    span= musica.id
+ 
+  p 
+    b Nome: 
+    span= musica.tit
+
+  p 
+    b Local: 
+    span= musica.local
+  
+  p 
+    b Provincia: 
+    span= musica.prov
+  
+  p 
+    b Musico: 
+    span= musica.musico
+  

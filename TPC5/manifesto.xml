@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC5</titulo>
+        <data>22 de Março de 2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <p>
+        Este trabalho consistia na implementação de um servidor NodeJS com a utilização de uma REST API, neste caso o
+        <xref>
+            <url>https://www.npmjs.com/package/json-server</url>
+            <texto>json-server</texto>
+        </xref>
+    </p>
+    <p>
+        com o auxílio da framework
+        <xref>
+            <url>https://expressjs.com/</url>
+            <texto>Express</texto>
+        </xref>
+    </p>
+    <p>O objetivo seria criar uma página HTML onde apresentássemos uma listagem de músicas, incluindo o seu identificador, o seu título e a província das mesmas.</p>
+    <p>Deviamos posteriormente responder a rotas específicas como: /musicas/id onde apresentássemos a página relativa à musica correspondente ao identifcador requisitado;</p>
+    <p>/musicas/prov/provincia onde apresentássemos todas as músicas relativas a uma dada província;</p>
+    <p>/musicas/insert, inserindo depois em /musicas, onde apresentássemos um formulário que permitisse a adição de novas músicas.</p>
+    <p>
+        Para além disso, na página principal onde são apresentadas as músicas presentes na
+        <xref>
+            <url>arq-son2.json</url>
+            <texto>base de dados</texto>
+        </xref>
+        deveríamos ser capazes de aceder à página individual de cada música, à página de cada província, bem como à página do formulário que permite a inserção de novas músicas.
+    </p>
+
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Serviço que responde aos pedidos do cliente e comunica com a API do json-server, bem como com os routers do Express.</texto>
+        </resultado>
+        <resultado>
+            <url>arq-son2.json</url>
+            <texto>Dataset.</texto>
+        </resultado>
+        <resultado>
+            <url>https://www.npmjs.com/package/axios</url>
+            <texto>Utilizado para efetuar os pedidos à API. Para instalar correr "npm install axios".</texto>
+        </resultado>
+        <resultado>
+            <url>https://expressjs.com/</url>
+            <texto>Framework utilziada para auxiliar no desenvolvimento da aplicação</texto>
+        </resultado>
+        <resultado>
+            <url>script.py</url>
+            <texto>Script utilizado para adicionar identificadores a cada música.</texto>
+        </resultado>
+    </resultados>
+</doc>

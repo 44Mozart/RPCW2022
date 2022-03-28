@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  div.w3-bar.w3-border.w3-blue-grey
+    a.w3-bar-item.w3-button(href="/musicas") Home 
+    a.w3-bar-item.w3-button(href="/musicas/insert") Inserir Musica
+  h1 Lista de músicas
+  table.w3-table-all.w3-hoverable 
+    tr 
+      th Identificador 
+      th Titulo
+
+    each m in musicas 
+      tr 
+        td= m.id 
+        td
+          a(href="/musicas/" + m.id)= m.tit 

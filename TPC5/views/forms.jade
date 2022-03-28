@@ -1,0 +1,26 @@
+extends layout 
+
+block content
+  div.w3-bar.w3-border.w3-blue-grey
+    a.w3-bar-item.w3-button(href="/musicas") Home 
+    a.w3-bar-item.w3-button(href="/musicas/insert") Inserir Musica
+  h1.w3-center Adiciona Uma Nova Música
+  form.w3-container(action='/musicas', method='POST')
+      label.w3-text-teal
+        b Título
+      input.w3-input.w3-border.w3-light-grey(type='text', name='tit')
+      label.w3-text-teal
+        b Músico
+      input.w3-input.w3-border.w3-light-grey(type='text', name='musico')        
+      label.w3-text-teal
+        b Província
+      input.w3-input.w3-border.w3-light-grey(type='text', name='prov')          
+      label.w3-text-teal
+        b Local
+      input.w3-input.w3-border.w3-light-grey(type='text', name='local') 
+      label.w3-text-teal
+        b Duração
+      input.w3-input.w3-border.w3-light-grey(type='text', name='duracao')
+      br
+      input.w3-btn.w3-blue-grey(type='submit', value='Registar')
+      input.w3-btn.w3-blue-grey(type='reset', value='Limpar valores')
