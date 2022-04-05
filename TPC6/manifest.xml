@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC6: gestorFicheiros</titulo>
+        <data>29/03/2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>André Carvalho da Cunha Martins</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>
+            Este trabalho consistia na implementação de um servidor NodeJS com ligação a uma base de dados MongoDB e, contando
+         com o auxílio da framework
+            <xref>
+                <url>https://expressjs.com/</url>
+                <texto>Express</texto>
+            </xref>
+        </p>
+        <p>Neste trabalho pŕatico foi possível recorrer à utilização das funcionalidades da base de dados MongoDB.</p>
+        <p>Para isso, tivemos que definir models e controllers para recorrer a essa interação entre a nossa aplicação e a base de dados</p>
+        <p>Aliado a isso, nesta aplicação era possível realizar o upload e download de ficheiros, e foi possível explorar e conciliar
+        a maneira como o tratamento de ficheiros tem que ser realizado.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação web.</texto>
+        </resultado>
+        <resultado>
+            <url>controllers/file.js</url>
+            <texto>Controlador para a gestão da meta-informação</texto>
+        </resultado>
+        <resultado>
+            <url>models/file.js</url>
+            <texto>Modelo para a meta-informação dos ficheiros</texto>
+        </resultado>
+        <resultado>
+            <url>public/images/</url>
+            <texto>Diretoria que contém os ficheiros que vão sendo submetidos na página web.</texto>
+        </resultado>
+        <resultado>
+            <url>routes/index.js</url>
+            <texto>Rota principal</texto>
+        </resultado>
+        <resultado>
+            <url>views/index.pug</url>
+            <texto>View da página web</texto>
+        </resultado>
+    </resultados>
+</doc>
