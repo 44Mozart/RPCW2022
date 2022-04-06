@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  h2.w3-container.w3-teal File Upload
+  form.w3-container(action='/insert' method='POST' enctype='multipart/form-data')
+    label.w3-text-teal
+      b Select file
+    input.w3-input.w3-border.w3-light-grey(type='file' name='myFile' required)
+    label.w3-text-teal
+      b Description
+    input.w3-input.w3-border.w3-light-grey(type='text' name='desc' required)
+    input.w3-btn.w3-blue-grey(type='submit' value='Submit')
+  unless empty
+    h2.w3-container.w3-teal.w3-center File List    
+    table.w3-table.w3-bordered
+      tr
+        th.w3-center Date
+        th.w3-center Description
+        th.w3-center File
+        th.w3-center Size
+        th.w3-center Type
+      each f in files
+        tr
+          td.w3-center= f.date
+          td.w3-center= f.desc
+          td.w3-center
+            a(href="/images/"+f.name download target="_blank")= f.name
+          td.w3-center= f.size
+          td.w3-center= f.mimetype
+          td
+            form(action="/delete/"+f._id method='POST')
+              input.w3-right.w3-circle.w3-round-large.w3-red(type='submit' value='Delete')
+  else
+    h2.w3-container.w3-teal.w3-center Não existem ficheiros carregados  
