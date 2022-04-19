@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC5</titulo>
+        <data>5 de Abril de 2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW2022</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consistia na realização do segundo exercício do teste de RPCW do ano passado.</p>
+        <p>O objetivo deste exercício era a contrução de uma aplicação que trabalhasse com a API CLAV.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Aplicação Web</texto>
+        </resultado>
+        <resultado>
+            <url>routes/index.js</url>
+            <texto>Rotas da aplicação.</texto>
+        </resultado>
+        <resultado>
+            <url>views</url>
+            <texto>Diretoria com as views da aplicação.</texto>
+        </resultado>
+    </resultados>
+</doc>

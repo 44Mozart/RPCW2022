@@ -1,0 +1,51 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal Classe
+
+  table.w3-table-all.w3-hoverable 
+    tr 
+      th Titulo 
+      th Nivel 
+      th Status 
+      th Código
+      tr
+        td= dados.titulo 
+        td= dados.nivel 
+        td= dados.status 
+        td 
+            a(href="/"+dados.codigo)= dados.codigo 
+  if dados.filhos.length > 0
+    p.w3-container.w3-teal Filhos: 
+        table.w3-table-all.w3-hoverable 
+            tr 
+                th titulo 
+                th Código
+                
+            each f in dados.filhos 
+                tr 
+                    td= f.titulo 
+                    td 
+                        a(href="/"+f.codigo)=f.codigo 
+  if dados.nivel == 3
+    if dados.processosRelacionados.length > 0
+        p.w3-container.w3-teal Processos Relacionados: 
+            table.w3-table-all.w3-hoverable  
+                tr 
+                    th Relação 
+                    th Código 
+                each r in dados.processosRelacionados 
+                    tr 
+                        td= r.idRel 
+                        td 
+                            a(href="/"+r.codigo)= r.codigo 
+  if dados.pai.codigo == undefined 
+    p.w3-container.w3-teal
+        a(href='/') Voltar à página principal 
+  else 
+    p.w3-container.w3-teal
+        a(href='/' + dados.pai.codigo) Página Anterior 
+    p.w3-container.w3-teal
+        a(href='/') Voltar a pagina principal
+    
+    

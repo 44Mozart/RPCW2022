@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1.w3-container.w3-teal Classes Nivel 1
+
+  table.w3-table-all.w3-hoverable 
+    tr 
+      th Titulo 
+      th Código 
+    
+    each d in dados 
+      tr 
+        td= d.titulo 
+        td 
+          a(href="/"+d.codigo)= d.codigo
