@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC8: MyPara</titulo>
+        <data>26/04/2022</data>
+        <autor>
+            <id>PG47488</id>
+            <nome>Maria Quintas Barros</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo></resumo>
+    <resultados>
+        <resultado>
+            <url>app.js</url>
+            <texto>Serviço que responde aos pedidos do cliente.</texto>
+        </resultado>
+        <resultado>
+            <url>myPara.js</url>
+            <texto>Script que responde às interações do cliente com a página HTML.</texto>
+        </resultado>
+    </resultados>

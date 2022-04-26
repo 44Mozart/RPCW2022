@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyPara</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="w3.css">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="myPara.js"></script>
+</head>
+
+<body>
+    <h1 id="titulo" class="w3-container w3-teal">Add paragraph</h1>
+    <form class="w3-container" id="myParaForm">
+        <fieldset class=" w3-container w3-margin">
+            <legend>New Paragraph</legend>
+            <div class="w3-row">
+                <div class="w3-col s2 w3-right-align w3-margin">
+                    Text:
+                </div>
+                <div class="w3-col s9">
+                    <textarea id="paraText" name="para" cols="80" rows="3"></textarea>
+                </div>
+                </tr>
+            </div>
+            <input class="w3-btn w3-teal w3-round w3-margin" type="button" id="addPara" value="Add">
+        </fieldset>
+    </form>
+    <div class="w3-container w3-border w3-margin">
+        <ul class="w3-ul" id="paraList"></ul>
+    </div>
+</body>
+
+</html>
