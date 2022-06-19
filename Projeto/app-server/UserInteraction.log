@@ -29,3 +29,12 @@
 {"Recurso":"Testes de 2021","User":"admin","component":"Interação User","level":"info","message":"Recurso Visualizado","timestamp":"2022-06-19 21:19:59"}
 {"Recurso":"TesteCorreto.zip","User":"admin","component":"Interação User","level":"info","message":"Download de recurso efetuado","timestamp":"2022-06-19 21:23:43"}
 {"User":"admin","component":"Interação User","level":"info","message":"Sessão Inicializada","timestamp":"2022-06-19 21:24:30"}
+{"User":"admin","component":"Interação User","level":"info","message":"Sessão Inicializada","timestamp":"2022-06-19 21:46:03"}
+{"Recurso":"Testes de 2021","User":"admin","component":"Interação User","level":"info","message":"Recurso Visualizado","timestamp":"2022-06-19 21:46:15"}
+{"User":"teste","component":"Interação User","level":"info","message":"Sessão Inicializada","timestamp":"2022-06-19 21:47:33"}
+{"Recurso":"Testes de 2021","User":"teste","component":"Interação User","level":"info","message":"Recurso Visualizado","timestamp":"2022-06-19 21:49:17"}
+{"User":"admin","component":"Interação User","level":"info","message":"Sessão Inicializada","timestamp":"2022-06-19 21:50:40"}
+{"Recurso":"ManifestFileImcompleto.zip","User":"admin","component":"Interação User","level":"info","message":"Download de recurso efetuado","timestamp":"2022-06-19 21:51:04"}
+{"Recurso":"Slides sobre Jquery","User":"admin","component":"Interação User","level":"info","message":"Recurso Visualizado","timestamp":"2022-06-19 21:51:23"}
+{"User":"admin","component":"Interação User","level":"info","message":"Sessão Inicializada","timestamp":"2022-06-19 21:52:01"}
+{"Recurso":"Testes de 2021","User":"admin","component":"Interação User","level":"info","message":"Recurso Visualizado","timestamp":"2022-06-19 21:52:25"}
