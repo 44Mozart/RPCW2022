@@ -1,0 +1,173 @@
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+.break {
+    font-size: 50px;
+    color: rgba(128, 128, 128, 0.486);
+}
+
+.btn-primary {
+    background-color: f77f00;
+}
+
+h1 {
+    padding-top: 140px;
+    ;
+    color: #fca311;
+    font-style: bold;
+}
+
+h2 {
+    color: #e5e5e5;
+    padding: 60px 0;
+    padding-bottom: 150px;
+}
+
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.navbar .nav-link:hover {
+    color: #fca311 !important;
+}
+
+.bg-image {
+    background-image: url(../images/photo-1560977466-c02ffbb12189.jpeg);
+    background-size: cover;
+    height: 100%;
+
+}
+
+main {
+    margin: 0 1em;
+    padding-top: 2em;
+    font-family: Roboto, sans-serif;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.row {
+    margin: 10em 0;
+}
+
+#titulo-aux1 {
+    border-bottom: 2px solid #f1f1f1;
+    padding: 0 15px;
+    font-weight: bold;
+}
+
+#bottom-right {
+    letter-spacing: 2px;
+    background-color: #14213d;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: tiny;
+}
+
+#bottom-left {
+    letter-spacing: 2px;
+    background-color: #14213d;
+    position: absolute;
+    bottom: -1;
+    left: 16px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: tiny;
+}
+
+#bottom-right:hover {
+    border: 1px solid #fca311;
+    background-color: #fff;
+    color: #fca311;
+}
+
+#xAux {
+    color: #fca311;
+    padding-bottom: 3em;
+}
+
+#bottom-left:hover {
+    border: 1px solid #fca311;
+    background-color: #fff;
+    color: #fca311;
+}
+
+@media(max-width:850px) {
+    header {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    #titulo-aux1 {
+        font-size: 30px;
+    }
+
+    #row1 {
+        font-size: 0.5em;
+    }
+
+    #bottom-right {
+        letter-spacing: 2px;
+        background-color: #14213d;
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 8px;
+        color: #fff;
+        font-weight: tiny;
+    }
+
+    #bottom-left {
+        letter-spacing: 2px;
+        background-color: #14213d;
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+        font-size: 8px;
+        color: #fff;
+        font-weight: tiny;
+    }
+
+}
+
+#rowImg {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+#rowImg:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+
+}
+
+#footer {
+    margin: -1px;
+    padding: 0;
+
+}
+
+#icon {
+    text-align: end;
+    padding-right: 1em;
+}
+
+#morada {
+    font-size: 1.3em;
+    color: #e5e5e5;
+
+}
+
+footer {
+    background-color: #14213d;
+}
+
+#butao_login {}

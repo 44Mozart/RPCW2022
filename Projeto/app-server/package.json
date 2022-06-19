@@ -1,0 +1,32 @@
+{
+  "name": "app-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.9",
+    "axios": "^0.27.2",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "decompress": "^4.2.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "multer": "^1.4.5-lts.1",
+    "node-stream-zip": "^1.15.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "pug": "2.0.0-beta11",
+    "session-file-store": "^1.5.0",
+    "unzip": "^0.1.11",
+    "unzipper": "^0.10.11",
+    "uuid": "^8.3.2",
+    "winston": "^3.7.2"
+  }
+}

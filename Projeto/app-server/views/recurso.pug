@@ -1,0 +1,115 @@
+extends layout
+
+block content
+  script(src="/javascripts/likes.js")
+  style(type="text/css").
+    .navbar .nav-link{
+      color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+      color: #f77f00 !important;
+    } 
+    .navbar .navbar-expand-md .navbar-light{
+      letter-spacing: 2px;
+    }
+    #botao{
+      letter-spacing: 2px;
+      background-color: #14213d;
+      font-size: 18px;
+      color:#fff;
+      font-weight: tiny;
+    }
+    #botao:hover{
+      border:1px solid #fca311;
+      background-color:#fff;
+      color:#fca311;
+    }
+
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") Recursos
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+    span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+    div(class="navbar-nav ml-auto")
+      a(href='/menu' class="nav-item nav-link") Home
+      a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+      a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+      a(href='/recursos' class="nav-item nav-link") Recursos
+      a(href='/admistrador' class="nav-item nav-link") Admin 
+      a(href='/logout' class="nav-item nav-link") Logout
+ 
+
+  form(tyle="margin:100px;")
+    h3= "Ficheiro: " + dados.title
+
+  table(class="table table-striped" style="margin-rigth:-20px; padding:10px;")
+    tr
+      th Data de Criação
+      td=dados.date_create
+    tr
+      th Data de Submissão
+      td=dados.date_submit
+    tr
+      th Produtor 
+      td=dados.producer
+    tr
+      th User 
+      td=dados.submiter
+    tr
+      th Título 
+      td=dados.title
+    tr
+      th Tipo
+      td=dados.type 
+             
+
+  div(style="margin:50px")
+    div(class="container")
+      div(class="row")
+        div(class="col")
+          div(class="card" style="width: 18rem;")
+            div(class="card-header") Conteúdo do Ficheiro
+            ul(class="list-group list-group-flush")
+              if dados.content.length > 0
+                each i in dados.content
+                  li(class="list-group-item")
+                    a(href= "/preview/"+ dados.type + "/" + dados.pai.split(".").slice(0,-1).join(".") + "/" + i)= i
+        div(class="col")
+          form(class="mx-auto form-group " action='/addlike' method='POST')
+            input(type="hidden" name="idRecurso" value=dados._id)
+            button(type="submit" id="botao" class="btn fa fa-thumbs-up" )= likes.likes
+          form(action='/adicionarComentario' method='POST')
+           div(class="form-group")
+            label(for="mensagem") Descrição
+            textarea(type="text" class="form-control" name="desc" placeholder="Escreve um comentário..." rows="4")
+            input(type="hidden" name="idRecurso" value=dados._id)
+            div(class="margin-top:5px")
+           button(type="submit" class="btn btn-outline-secondary btn-lg" id="botao") Enviar
+          
+
+
+
+
+  h3 Comentários
+  if com.length > 0
+        table(class="table table-striped" style="margin-rigth:-20px; padding:10px;")
+          tr
+            th Data
+            th Utilizador
+            th Comentário
+            th
+            
+              
+          each f in com
+            tr 
+              td=f.data
+              td=f.idUser
+              td=f.desc
+              td
+               form(class="mx-auto form-group " action="/apagarC/" + f._id + '/' + f.idRecurso)
+                button(type="submit" id="botao" class="btn fa fa-close")
+         
+  else
+    p There are no comments...
+          
+  

@@ -1,0 +1,46 @@
+extends layout
+
+block content
+  style(type="text/css").
+    .navbar .nav-link{
+       color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+       color: #f77f00 !important;
+    } 
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") Documentos
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+      span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+      div(class="navbar-nav ml-auto")
+        a(href='/menu' class="nav-item nav-link") Home
+        a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+        a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+        a(href='/recursos' class="nav-item nav-link") Recursos
+        a(href='/admistrador' class="nav-item nav-link") Admin 
+        a(href='/logout' class="nav-item nav-link") Logout
+  h3 While you were out:
+  if dados.length > 0
+        table(class="table table-striped" style="margin-rigth:-20px; padding:10px;")
+          tr
+            th Título 
+            th Data de Criação
+            th Data de Submissão
+            th Produtor 
+            th User 
+            th Tipo 
+              
+          each f in dados
+            tr 
+              td
+                a(href="/recursos/see/" + f._id)= f.title
+              td=f.date_create
+              td=f.date_submit
+              td=f.producer
+              td=f.submiter
+              td=f.type
+  else
+        p Não foram adicionados novos recursos desde que fez logout!
+
+

@@ -1,0 +1,75 @@
+extends layout
+
+block content
+  style(type="text/css").
+    .navbar .nav-link{
+      color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+      color: #f77f00 !important;
+    } 
+    .navbar .navbar-expand-md .navbar-light{
+      letter-spacing: 2px;
+    }
+
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") O meu perfil
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+    span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+    div(class="navbar-nav ml-auto")
+      a(href='/menu' class="nav-item nav-link") Home
+      a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+      a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+      a(href='/recursos' class="nav-item nav-link") Recursos
+      a(href='/admistrador' class="nav-item nav-link") Admin 
+      a(href='/logout' class="nav-item nav-link") Logout
+ 
+
+  table(class="table table-striped" style="margin-rigth:-20px; padding:10px;")
+    tr
+      th Username
+      td=dados.username
+    tr
+      th Última vez Online:
+      td= dados.dataonline
+    tr
+      th Mudar a password
+      td
+        form(class="mx-auto form-group" action='/user/mudapass/' + dados.username)
+          input(type="submit" class="btn btn-outline-secondary btn-sm" value="Mudar password")
+    tr 
+      th Nivel
+      td=dados.level
+
+
+  h3 Recursos com o seu like:
+  if favs.length > 0
+    table(class="table")
+      tr
+        th(scope="col") Título 
+        th(scope="col") Data de Criação
+        th(scope="col") Data de Submissão
+        th(scope="col") Produtor 
+        th(scope="col") User 
+        th(scope="col") Tipo 
+        th(scope="col") Likes
+        
+              
+      each f in favs
+        tr 
+          td(scope="row")
+            a(href="/recursos/see/" + f._id)= f.title
+          td=f.date_create
+          td=f.date_submit
+          td=f.producer
+          td=f.submiter
+          td=f.type
+          td=f.likes
+          
+
+  else
+    p Ainda não gostou de nenhum recurso!
+       
+       
+           

@@ -1,0 +1,71 @@
+extends layout
+
+block content
+  style(type="text/css").
+    .navbar .nav-link{
+      color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+      color: #f77f00 !important;
+    } 
+    .navbar .navbar-expand-md .navbar-light{
+      letter-spacing: 2px;
+    }
+    #botao{
+      letter-spacing: 2px;
+      background-color: #14213d;
+      font-size: 18px;
+      color:#fff;
+      font-weight: tiny;
+    }
+    #botao:hover{
+      border:1px solid #fca311;
+      background-color:#fff;
+      color:#fca311;
+    }
+
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") Utilizadores
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+    span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+    div(class="navbar-nav ml-auto")
+      a(href='/menu' class="nav-item nav-link") Home
+      a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+      a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+      a(href='/recursos' class="nav-item nav-link") Recursos
+      a(href='/admistrador' class="nav-item nav-link") Admin 
+      a(href='/logout' class="nav-item nav-link") Logout
+
+  h2 Utilizadores Registados no Sistema
+  if dados.length > 0
+    table(class="table")
+      tr
+        th(scope="col") Username
+        th(scope="col") Level
+        each f in dados
+          if f.level == "Consumidor" || f.level == "Produtor"
+            th(scope="col") Troca
+        th(scope="col")
+            
+      each f in dados
+        if f.level != "Admin"
+          tr 
+            td(scope="row")= f.username
+            td= f.level
+            if f.level == "Consumidor"
+              td
+                form(class="mx-auto form-group" action="/user/mudarCons/" + f.username)
+                  button(type="submit" id="botao" class="btn") Mudar o Nível Para Produtor
+
+            if f.level == "Produtor"
+              td
+                form(class="mx-auto form-group" action="/user/mudarProd/" + f.username)
+                  button(type="submit" id="botao" class="btn")  Mudar o Nível Para Consumidor
+            td
+              form(class="mx-auto form-group " action="/user/delete/" + f.username)
+                button(type="submit" id="botao" class="btn fa fa-close")
+
+            
+  else
+    p Não existem Users Registados

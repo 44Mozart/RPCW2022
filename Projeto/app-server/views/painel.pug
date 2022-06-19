@@ -1,0 +1,51 @@
+extends layout
+
+block content
+
+  style(type="text/css").
+    .navbar .nav-link{
+      color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+      color: #f77f00 !important;
+    } 
+    .navbar .navbar-expand-md .navbar-light{
+      letter-spacing: 2px;
+    }
+    #botao{
+      letter-spacing: 2px;
+      background-color: #14213d;
+      font-size: 18px;
+      color:#fff;
+      font-weight: tiny;
+    }
+    #botao:hover{
+      border:1px solid #fca311;
+      background-color:#fff;
+      color:#fca311;
+    }
+
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") O meu perfil
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+    span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+    div(class="navbar-nav ml-auto")
+      a(href='/menu' class="nav-item nav-link") Home
+      a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+      a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+      a(href='/recursos' class="nav-item nav-link") Recursos
+      a(href='/admistrador' class="nav-item nav-link") Admin 
+      a(href='/logout' class="nav-item nav-link") Logout
+
+  h3(style="margin-top:100px; margin-left:100px") Painel do Admistrador
+  div(class="btn-group" role="group" style="margin-left:100px;")
+    form(class="mx-auto form-group" action='/user/all')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Gestão de Utilizadores")
+    form(class="mx-auto form-group" action='/logs')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Logs de Interação Users")
+    form(class="mx-auto form-group" action='/logsres')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Reset Logs de Interação Users")
+      
+
+

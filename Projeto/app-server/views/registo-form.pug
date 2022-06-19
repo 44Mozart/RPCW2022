@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h3(class="navbar navbar-light " style="background-color:#ffbf69; color:#fff") Registe-se!
+    form(action='/registo' method='POST' style="margin:100px;")
+        h2 Registo de novo utilizador:
+        div(class="form-group")
+            label(for="exampleInputEmail1") Username:
+            input(type="text" class="form-control" name="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username")
+            small(id="emailHelp" class="form-text text-muted") Mais de 5 caracteres.
+        div(class="form-group")
+            label(for="exampleInputPassword1") Password:
+            input(type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password")
+        button(type="submit" class="btn btn-outline-secondary btn-lg") Enviar

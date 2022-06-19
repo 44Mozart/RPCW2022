@@ -1,0 +1,92 @@
+extends layout
+
+block content
+  style(type="text/css").
+    .navbar .nav-link{
+      color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+      color: #f77f00 !important;
+    } 
+    .navbar .navbar-expand-md .navbar-light{
+      letter-spacing: 2px;
+    }
+    #botao{
+      letter-spacing: 2px;
+      background-color: #14213d;
+      font-size: 18px;
+      color:#fff;
+      font-weight: tiny;
+    }
+    #botao:hover{
+      border:1px solid #fca311;
+      background-color:#fff;
+      color:#fca311;
+    }
+
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") Recursos
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+    span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+    div(class="navbar-nav ml-auto")
+      a(href='/menu' class="nav-item nav-link") Home
+      a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+      a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+      a(href='/recursos' class="nav-item nav-link") Recursos
+      a(href='/admistrador' class="nav-item nav-link") Admin 
+      form(class="form-inline my-2 my-lg-0" method="POST" action="/search")
+        input(class="form-control mr-sm-2" name="search" placeholder="Titulo do ficheiro" aria-label="Search")
+        button(class="btn " id="botao" type="submit") Search
+      a(href='/logout' class="nav-item nav-link") Logout
+    
+
+  h3(style="margin-top:100px; margin-left:100px") Tipos de Ficheiros Disponíveis:
+  div(class="btn-group" role="group" style="margin-left:100px;")
+    form(class="mx-auto form-group" action='/recursos/tipo/Slides')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Slides")
+    form(class="mx-auto form-group" action='/recursos/tipo/Testes')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Testes")
+    form(class="mx-auto form-group" action='/recursos/tipo/Fichas')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Fichas")
+    form(class="mx-auto form-group" action='/recursos/tipo/Manuais')
+      input(type="submit" class="btn btn-outline-secondary btn-lg" id="botao" value="Manuais")
+      
+  if dados.length > 0
+    table(class="table")
+      tr
+        th(scope="col") Título 
+        th(scope="col") Data de Criação
+        th(scope="col") Data de Submissão
+        th(scope="col") Produtor 
+        th(scope="col") User 
+        th(scope="col") Tipo 
+        th(scope="col") Likes
+        th(scope="col") 
+              
+      each f in dados
+        tr 
+          td(scope="row")
+            a(href="/recursos/see/" + f._id)= f.title
+          td=f.date_create
+          td=f.date_submit
+          td=f.producer
+          td=f.submiter
+          td=f.type
+          td=f.likes
+          td
+            div(class="container")
+              div(class="row")
+                div(class=".col-6 .col-md-4")
+                  form(class="mx-auto form-group " action="/download/" + f.type + '/' + f.pai)
+                    button(type="submit" id="botao" class="btn fa fa-download")
+                div(class=".col-6 .col-md-4")
+                  form(class="mx-auto form-group " action="/editar/" + f._id)
+                    button(type="submit" id="botao" class="btn fa fa-edit")
+                div(class=".col-6 .col-md-4")
+                  form(class="mx-auto form-group " action="/recursos/del/" + f._id)
+                    button(type="submit" id="botao" class="btn fa fa-close")
+
+  else
+    p There are no files...
+

@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  style(type="text/css").
+    .navbar .nav-link{
+      color: #fff !important;
+    } 
+    .navbar .nav-link:hover{
+      color: #f77f00 !important;
+    } 
+    .navbar .navbar-expand-md .navbar-light{
+      letter-spacing: 2px;
+    }
+  nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+    h1(style="color:#fff") Documentos
+    button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+    span(class="navbar-toggler-icon")
+    div(class="collapse navbar-collapse" id="servicos")
+    div(class="navbar-nav ml-auto")
+      a(href='/menu' class="nav-item nav-link") Home
+      a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+      a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+      a(href='/recursos' class="nav-item nav-link") Recursos
+      a(href='/admistrador' class="nav-item nav-link") Admin 
+      a(href='/logout' class="nav-item nav-link") Logout
+
+  
+  form(method='POST' action='/insere' enctype="multipart/form-data" style="margin:100px;")
+    h3 Inserir Novo Ficheiro
+    div(class="form-group")
+      label(for="customFile" style="margin-right:10px") Ficheiro 
+      input(type="file" name='myFile')
+    button(type="submit" class="btn btn-outline-secondary btn-lg") Enviar

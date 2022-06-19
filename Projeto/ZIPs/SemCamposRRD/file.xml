@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AulaPrática xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="aulaP.xsd" id="dweb2019-e2">
+  <meta>
+    <disciplina>Desenvolvimento de Aplicações Web (MIEI)</disciplina>
+    <datas>
+      <data tipo="criac.">2019-01-30</data>
+    </datas>
+    <objectivos>
+      <para>O objectivo principal desta ficha é testar os conhecimentos obtidos durante as aulas no desenvolvimento de aplicações Web e outras tarefas
+        afins.</para>
+      <para>Os resultados finais deverão ser enviados ao docente da seguinte forma:<lista>
+          <item>Enviar por email para: jcr@di.uminho.pt</item>
+          <item>Colocar no subject/assunto: DWEB2018::Exame::Axxxxx</item>
+          <item>Em que Axxxxx corresponde ao número do aluno;</item>
+          <item>Enviar um ZIP com a resolução. Esse ZIP deverá conter um PR (project record/manifesto) que descreve o que se fez e lista os ficheiros
+            que constituem a solução (à semelhança dos trabalhos de casa);</item>
+          <item>Para os exercícios em que recorrer a mais do que um servidor, por exemplo, servidor node e servidor Mongo, explique como se pode
+            colocar a funcionar a sua App;</item>
+          <item>Em alternativa ao envio do ZIP por email, coloque-o no GitHub ou no WeTransfer e envie o respetivo link por email;</item>
+          <item>No fim, confirme com o docente que tudo foi enviado e recebido como deve ser.</item>
+        </lista></para>
+    </objectivos>
+    <recursos>
+      <documento url="../datasets/prize.json">Lista dos prémios Nobel.</documento>
+    </recursos>
+  </meta>
+  <corpo>
+    <exercício>
+      <título>Prémios Nobel</título>
+      <enunciado>
+        <para>O Prémio Nobel é um conjunto de seis prêmios internacionais anuais concedidos em várias categorias por instituições suecas e norueguesas, 
+          para reconhecer pessoas ou instituições que realizaram pesquisas, descobertas ou contribuições notáveis para a humanidade no ano imediatamente 
+          anterior ou no curso de suas atividades.</para>
+        <para>O último desejo do cientista sueco Alfred Nobel estabeleceu os prêmios em 1895. Os prêmios em Química, Literatura, Paz, Física e Fisiologia 
+          ou Medicina foram concedidos pela primeira vez em 1901. Em 1968, o Sveriges Riksbank estabeleceu o Prêmio de Ciências Econômicas em Memória de 
+          Alfred Nobel, que, embora não seja um Prêmio Nobel, tem sido comumente conhecido como o Prêmio Nobel de Economia. O Prêmio Nobel é amplamente 
+          considerado como o mais prestigiado prêmio disponível nas áreas de literatura, medicina, física, química, economia e ativismo pela paz.</para>
+        <para>Neste exercício, terás de:</para>
+        <alíneas>
+          <alínea>Converter o dataset disponibilizado nos recursos para um formato à tua escolha, ou usá-lo como está (há vários conversores online de XML para JSON e outros formatos),
+            e colocá-lo no sistema que usarás para assegurar a sua persistência: ficheiro, MongoDB, json-server, etc;</alínea>
+          <alínea>Criar um servidor nodejs que dê suporte à seguinte API de dados (note que não é necessário qualquer interface web):<lista>
+              <item>GET /api/premios - Devolve a lista de prémios apenas com os campos "year" e "category";</item>
+              <item>GET /api/premios/:id - Devolve a informação completa de um prémio;</item>
+              <item>GET /api/categorias - Devolve a lista de categorias, sem repetições;</item>
+              <item>GET /api/premios?categoria=YYY - Devolve a lista de prémios que tenham o campo "category" com o valor "YYY";</item>
+              <item>GET /api/premios?categoria=YYY&amp;data=AAAA - Devolve a lista de prémios que tenham o campo "category" com o valor "YYY" e o campo "year" 
+              com um valor superior a "AAAA";</item>
+              <item>GET /api/laureados - Devolve uma lista ordenada alfabeticamente por nome dos laureados com os campos correspondentes ao nome, ano do prémio e categoria.</item>
+            </lista></alínea>
+        </alíneas>
+      </enunciado>
+    </exercício>
+    <exercício>
+      <título>CLAV: Classificação e Avaliação da Informação Pública</título>
+      <enunciado>
+        <para>A CLAV é uma plataforma em desenvolvimento no DI/UM em parceria e sob encomenda da Direção Geral do Livro, Arquivos e Bibliotecas
+          (DGLAB) que visa a classificação e a avaliação de toda a documentação circulante na administração pública portuguesa.</para>
+        <para>Uma das faces visíveis do projeto é o catálogo dos processos da administração pública portuguesa, designado por Lista
+          Consolidada.</para>
+        <para>Já se encontra disponível para consulta online: <xref url="http://clav-test.di.uminho.pt">site de teste</xref>.</para>
+        <para>É sobre este catálogo que irás desenvolver este exercício.</para>
+        <para>A API de dados disponível contem entre outras as seguintes possibilidades:<lista>
+            <item>GET http://clav-test.di.uminho.pt/api/classes - Devolve uma estratura hierárquica em JSON com a informação base de todas as
+              classes/processos da Lista Consolidada. Note que, os níveis 1 e 2 correspondem a funções e subfunções da Administração Pública, existem essencialmente para
+              arrumar a case e facilitar o acesso aos processo, o nível 3 corresponde ao processo e o nível 4 a uma divisão do processo quando, por determinado motivo partes da 
+              documentação desse processo têm conservações e destinos diferentes;</item>
+            <item>GET http://clav-test.di.uminho.pt/api/classes/nivel/3 - Devolve uma lista em JSON com a informação base de todos os
+              processos;</item>
+            <item>GET http://clav-test.di.uminho.pt/api/classes/nivel/1 - Devolve uma lista em JSON dos primeiros níveis, funções da AP;</item>
+            <item>GET http://clav-test.di.uminho.pt/api/classes/nivel/2 - Devolve uma lista em JSON dos segundos níveis, subfunções da AP;</item>
+            <item>GET http://clav-test.di.uminho.pt/api/classes/lista - Devolve uma lista em JSON de todas as classes (linearização da árvore
+              inicial);</item>
+            <item>GET http://clav-test.di.uminho.pt/api/classes/c100.10.001 - Devolve em JSON a informação base da classe com código:
+              c100.10.001;</item>
+            <item>GET http://clav-test.di.uminho.pt/api/classes/c100.20/descendencia - Devolve uma lista em JSON das classes filhas da classe passada
+              no pedido, neste caso, C100.20;</item>
+          <item>GET http://clav-test.di.uminho.pt/api/classes/c150.10.702/procRel - Uma classe de nível 3 pode ter relações com outra classe de nível 3. 
+            Este pedido devolve uma lista dos processos (classes de nível 3) que têm relações com o processo 150.10.702. São devolvidos: o identificador,
+            o código, o título e o código da relação (deste é possível extrair a designação da relação, a sua parte final);</item>
+          </lista></para>
+        <para>Desenvolve então as seguintes alíneas:</para>
+        <alíneas>
+          <alínea>Testa a API de dados com o Postman e dá resposta às seguintes questões:<lista>
+              <item>Quantos processos (nível 3) e quais são (obtem uma lista em JSON; podes concatenar sublistas invocando várias queries), existem na
+                descendência da classe 500?</item>
+              <item>Quantos subprocessos existem? (classes de nível 4)</item>
+              <item>Quantos processos (classes de nível 3) se encontram na descendência de 150.10?</item>
+            <item>Quantos processos (classes de nível 3) estão relacionados com 150.10.702?</item>
+            </lista></alínea>
+        </alíneas>
+        <para>Depois deste <realce>"aquecimento"</realce>, desenvolve uma aplicação em nodejs que permita navegar nesta estrutura de classes. :</para>
+        <alíneas>
+          <alínea>Na página inicial, para além de um título e outra informação de contexto, deverá aparecer a lista de classes de nível 1;</alínea>
+          <alínea>Todos os campos de informação com códigos de classes devem ser transformados em links que realizam pedidos à tua aplicação de nova
+            página;</alínea>
+          <alínea>Na página de cada classe, deve ser mostrada a informação base da classe, uma lista dos seus descendentes caso existam e, se a classe for
+            de nível 3 uma lista dos processos relacionados (cada um destes deve ser um limk para o respetivo processo);</alínea>
+          <alínea>Em todas as páginas deverá haver um link para voltar à página inicial e outro para a página anterior (nos casos em que justifique);</alínea>
+          <alínea>Usa a tua imaginação e criatividade...</alínea>
+        </alíneas>
+      </enunciado>
+    </exercício>
+  </corpo>
+</AulaPrática>

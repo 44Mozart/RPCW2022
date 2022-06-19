@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h3(class="navbar navbar-light " style="background-color:#ffbf69; color:#fff") LOGIN
+    form(action='/login' method='POST' style="margin:100px;")
+        h2() Introduza as suas credenciais:
+        div(class="form-group")
+            label(for="exampleInputEmail1") Username
+            input(type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username")
+            small(id="emailHelp" class="form-text text-muted")
+        div(class="form-group")
+            label(for="exampleInputPassword1") Password
+            input(type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password")
+        button(type="submit" class="btn btn-outline-secondary btn-lg") Enviar

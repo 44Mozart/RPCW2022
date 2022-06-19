@@ -1,0 +1,58 @@
+
+   
+extends layout
+
+block content
+    style(type="text/css").
+        .navbar .nav-link{
+            color: #fff !important;
+        } 
+        .navbar .nav-link:hover{
+            color: #f77f00 !important;
+        } 
+        .navbar .navbar-expand-md .navbar-light{
+            letter-spacing: 2px;
+        }
+        #botao{
+            letter-spacing: 2px;
+            background-color: #14213d;
+            font-size: 18px;
+            color:#fff;
+            font-weight: tiny;
+        }
+        #botao:hover{
+            border:1px solid #fca311;
+            background-color:#fff;
+            color:#fca311;
+        }
+
+    nav(class="navbar navbar-expand-md navbar-light;" style="background-color:#003049;")
+        h1(style="color:#fff") Recursos
+        button(class="navbar-toggler" data-toggle="collapse" data-target="#servicos")
+        span(class="navbar-toggler-icon")
+        div(class="collapse navbar-collapse" id="servicos")
+        div(class="navbar-nav ml-auto")
+            a(href='/menu' class="nav-item nav-link") Home
+            a(href='/user/meuperfil' class="nav-item nav-link") Meu Perfil
+            a(href='/novofile' class="nav-item nav-link") Novo ficheiro
+            a(href='/recursos' class="nav-item nav-link") Recursos
+            a(href='/admistrador' class="nav-item nav-link") Admin 
+            a(href='/logout' class="nav-item nav-link") Logout
+
+    form(action=`/editar/${dados._id}` method='POST' style="margin:100px;")
+        h3 Editar Recurso
+        div(class="form-group")
+            label(style="margin-right:10px;margin-left:10px") Data de criação
+            input(type="text" name="data" value=`${dados.date_create}` placeholder=`Introduza a data de inscrição` required)
+        div(class="form-group")
+            label(style="margin-right:10px;margin-left:10px") Produtor
+            input(type="text" name="produtor" value=`${dados.producer}` placeholder=`Introduza o produtor` required)
+        div(class="form-group")
+            label(style="margin-right:10px;margin-left:10px") Título
+            input(type="text" name="titulo" value=`${dados.title}` placeholder=`Introduza o título` required)
+        div(class="form-group")
+            label(style="margin-right:10px;margin-left:10px") Tipo de ficheiro
+            input(type="text" name="tipo" value=`${dados.type}` placeholder=`Introduza o título` required)
+        button(type="submit" class="btn btn-outline-secondary btn-lg") Enviar
+
+    
